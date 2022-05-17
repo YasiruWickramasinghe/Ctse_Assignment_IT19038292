@@ -27,7 +27,7 @@ spec:
         app: test-sliit
     spec:
       containers:
-      - image: it19038292/ctse_assignment_it19038292:e340ee35077e6334c085f59d2a765fbddf96a15b
+      - image: it19038292/ctse_assignment_it19038292:{{tag}}
         imagePullPolicy: Always
         name: ctse-assignment-it19038292-42q5g
         resources: {}
