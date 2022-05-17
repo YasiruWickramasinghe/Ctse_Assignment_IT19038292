@@ -4,6 +4,8 @@ metadata:
   creationTimestamp: null
   labels:
     app: test-sliit
+    manager: kubectl
+    operation: Update
   name: test-sliit
 spec:
   ports:
