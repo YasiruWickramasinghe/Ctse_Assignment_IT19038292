@@ -1,44 +1,44 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  generation: 1
-  labels:
-    app: test-sliit
-    manager: kubectl
-    operation: Update
-  name: test-sliit
-  namespace: default
-spec:
-  progressDeadlineSeconds: 600
-  replicas: 1
-  revisionHistoryLimit: 10
-  selector:
-    matchLabels:
-      app: test-sliit
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: test-sliit
-    spec:
-      containers:
-      - image: it19038292/ctse_assignment_it19038292:{{tag}}
-        imagePullPolicy: Always
-        name: ctse-assignment-it19038292-42q5g
-        resources: {}
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
-        ports:
-        - containerPort: 3000
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
-      schedulerName: default-scheduler
-      securityContext: {}
-      terminationGracePeriodSeconds: 30
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   generation: 1
+#   labels:
+#     app: test-sliit
+#     manager: kubectl
+#     operation: Update
+#   name: test-sliit
+#   namespace: default
+# spec:
+#   progressDeadlineSeconds: 600
+#   replicas: 1
+#   revisionHistoryLimit: 10
+#   selector:
+#     matchLabels:
+#       app: test-sliit
+#   strategy:
+#     rollingUpdate:
+#       maxSurge: 25%
+#       maxUnavailable: 25%
+#     type: RollingUpdate
+#   template:
+#     metadata:
+#       creationTimestamp: null
+#       labels:
+#         app: test-sliit
+#     spec:
+#       containers:
+#       - image: it19038292/ctse_assignment_it19038292:{{tag}}
+#         imagePullPolicy: Always
+#         name: ctse-assignment-it19038292-42q5g
+#         resources: {}
+#         terminationMessagePath: /dev/termination-log
+#         terminationMessagePolicy: File
+#         ports:
+#         - containerPort: 3000
+#       dnsPolicy: ClusterFirst
+#       restartPolicy: Always
+#       schedulerName: default-scheduler
+#       securityContext: {}
+#       terminationGracePeriodSeconds: 30
 
 
