@@ -18,7 +18,7 @@ app.use('/api/users', userRoutes)
 app.use('/api/auth', authRoutes)
 
 app.get('/', (req, res) => {
-  res.send('Authentication Microsrvice Running')
+  res.send('Authentication Microsrvice Running From Kubernets')
 })
 
 const port = process.env.PORT || 3000
